@@ -1,3 +1,5 @@
+import API_URL from "./config";
+
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
   
@@ -5,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
   
     try {
-      const res = await fetch('http://localhost:3000/api/login', {
+      const res = await fetch(`${API_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

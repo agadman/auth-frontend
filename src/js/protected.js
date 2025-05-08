@@ -1,3 +1,4 @@
+import API_URL from "./config";
 const contentDiv = document.getElementById('content');
 const errorP = document.getElementById('error');
 const token = sessionStorage.getItem('jwt');
@@ -9,7 +10,7 @@ if (!token) {
   const username = payload.username; 
   const email = payload.email;
 
-  fetch('http://localhost:3000/api/protected', {
+  fetch(`${API_URL}/protected`, {
     headers: {
       Authorization: `Bearer ${token}`
     }
@@ -21,7 +22,7 @@ if (!token) {
     .then(data => {
       contentDiv.innerHTML = `
         <p>Välkommen, <strong>${username}</strong>!</p>
-        <p>Den här sidan kan man bar se om man är inloggad.</p>
+        <p>Den här sidan kan man endast se om man är inloggad.</p>
         <p>Din email hämtad från databasen: ${email}</p>
         <button id="logout">Logga ut</button>
       `;
