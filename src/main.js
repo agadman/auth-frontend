@@ -1,7 +1,13 @@
 import './style.css'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-   <h1>Hello Vite!</h1>
+  <div id="app">
+   <h1>Moment 4 - Autentisering och säkerhet</h1>
+    <nav>
+      <ul>
+        <li><a href="/pages/register.html">Registrera konto</a></li>
+        <li><a href="/pages/login.html">Logga in</a></li>
+      </ul>
+    </nav>
   </div>
 `
