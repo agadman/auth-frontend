@@ -1,2 +1,2 @@
 # Moment 4 - Frontent
-Information kommer snart
+Information kommer snart...
