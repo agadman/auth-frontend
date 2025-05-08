@@ -7,6 +7,7 @@ if (!token) {
 } else {
   const payload = JSON.parse(atob(token.split('.')[1]));
   const username = payload.username; 
+  const email = payload.email;
 
   fetch('http://localhost:3000/api/protected', {
     headers: {
@@ -21,7 +22,7 @@ if (!token) {
       contentDiv.innerHTML = `
         <p>Välkommen, <strong>${username}</strong>!</p>
         <p>Den här sidan kan man bar se om man är inloggad.</p>
-        <p>Ditt användarnamn: ${username}</p>
+        <p>Din email hämtad från databasen: ${email}</p>
         <button id="logout">Logga ut</button>
       `;
       document.getElementById('logout').addEventListener('click', () => {
