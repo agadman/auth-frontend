@@ -28,7 +28,7 @@ if (!token) {
       `;
       document.getElementById('logout').addEventListener('click', () => {
         sessionStorage.removeItem('jwt');
-        window.location.href = '/login.html';
+        window.location.href = '/index.html';
       });
     })
     .catch(err => {

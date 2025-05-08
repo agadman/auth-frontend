@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
       if (res.ok) {
         const token = result.response.token;
         sessionStorage.setItem('jwt', token);
-        window.location.href = '/pages/protected.html';
+        window.location.href = '/protected.html';
       } else {
         document.getElementById('message').textContent = result.error || 'Login failed';
       }
