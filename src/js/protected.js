@@ -22,7 +22,7 @@ if (!token) {
     .then(data => {
       contentDiv.innerHTML = `
         <p>Välkommen, <strong>${username}</strong>!</p>
-        <p>Den här sidan kan man endast se om man är inloggad.</p>
+        <p>Den här sidan kan man endast se om man är inloggad. Ditt namn ovan hämtas från databasen.</p>
         <p>Din email hämtad från databasen: ${email}</p>
         <button id="logout">Logga ut</button>
       `;
