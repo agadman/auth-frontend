@@ -116,6 +116,30 @@ a:hover {
   color: red
 }
 
+#content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+#content p {
+  margin: 1rem 0;
+}
+
+#logout {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+
 @media (max-width: 480px) {
   form {
     padding: 1.5rem;
@@ -124,5 +148,14 @@ a:hover {
 
   h1 {
     font-size: 1.5rem;
+  }
+
+  #content {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 0.95rem;
   }
 }
